@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='<%- config.language %>'>
+    <head>
+        <meta charset='utf-8' />
+        <meta http-equiv='x-ua-compatible' content='ie=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='color-scheme' content='dark light'>
+
+        <title><%- config.title %></title>
+
+        <%- favicon_tag('images/favicon.png') %>
+        <%- css('https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css') %>
+        <%- css('css/main.css') %>
+    </head>
+    <body>
+        <div class="container d-flex flex-column" style="max-width: 800px">
+
+            <%- partial('partial/header') %>
+
+            <div class="row my-5 flex-grow-1">
+                <div class="col">
+                    <%- body %>
+                </div>
+            </div>
+
+            <%- partial('partial/footer') %>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<div class="row align-items-center mb-5">
+  <div class="col-auto">
+    <div class="overflow-hidden rounded-circle">
+      <img style="width: 100px" src="/images/rafal-ciok-web.png" />
+    </div>
+  </div>
+
+  <div class="col">
+     Hi folks! <span class="fs-4">👋</span> I'm Frontend Developer with 7 years of experience. Open to learn new things and ready for new challenges <span class="fs-4">✌</span>
+  </div>
+</div>
+
+<div class="row my-5">
+  <div class="col">
+    <h3 class="mb-3">Recent Posts</h3>
+
+    <% page.posts.forEach((post, index) => { %>
+      <div class="row my-3 <% index == config.per_page %>">
+        <div class="col">
+          <span class="pe-3"><%- full_date(post.date, 'LL') %></span>
+          <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+          <%- symbolsTime(post) %>
+        </div>
+      </div>
+    <% }) %>
+
+  </div>
+</div>
