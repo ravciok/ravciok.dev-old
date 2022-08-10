@@ -1,3 +1,8 @@
+:root {
+    --bs-font-sans-serif: 'Roboto', sans-serif;
+    --bs-font-monospace: 'Roboto Mono', monospace;
+}
+
 [data-theme="light"] {
     --font-color: #424242;
     --bg-color: #fff;
@@ -13,7 +18,9 @@
     --prism-font-color-7: #7c00aa;
     --prism-font-color-8: #a04900;
     --prism-font-color-9: #c22f2e;
+    color-scheme: light;
 }
+
 
 [data-theme="dark"] {
     --font-color: #e1e1ff;
@@ -30,10 +37,7 @@
     --prism-font-color-7: #c699e3;
     --prism-font-color-8: #e9ae7e;
     --prism-font-color-9: #cd6660;
-}
-
-* {
-    font-family: Arial, Helvetica, sans-serif;
+    color-scheme: dark;
 }
 
 body {
