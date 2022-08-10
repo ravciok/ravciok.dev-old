@@ -4,9 +4,9 @@
 
 # Site
 title: 'Rafał Ciok'
-subtitle: 'Personal site'
-description: ''
-keywords: ''
+subtitle: 'Personal blog'
+description: 'Frontend Developer with more than 7 years of professional experience, open to learn new things and always ready for new challenges!'
+keywords: 'JavaScript, TypeScript, Angular, RxJS, Frontend'
 author: 'Rafał Ciok'
 language: en
 timezone: 'Europe/Warsaw'
