@@ -1,51 +1,12 @@
 <div class="row align-items-center my-5">
   <div class="col">
-      <a href="/" class="text-decoration-none" style="color: var(--font-color)">
-          <h1 class="m-0 fw-bold">Rafał Ciok</h1>
+      <a href="/" class="text-decoration-none">
+          <h1 class="m-0 fw-bold" style="letter-spacing: 3px"><%- config.title %></h1>
       </a>
   </div>
 
-  <div class="col d-flex justify-content-end">
+  <div class="col-auto d-flex justify-content-end">
       <div onclick=setDarkMode('dark') class="btn btn-outline-link p-0 fs-3 border-0 show-light" tabindex="0">☀️</div>
       <div onclick=setDarkMode('light') class="btn btn-outline-link p-0 fs-3 border-0 show-dark">🌙</div>
   </div>
 </div>
-
-
-<script>
-  setDarkMode();
-
-  function setDarkMode(theme) {
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem("theme", 'dark');
-
-      return;
-    } else if (theme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem("theme", 'light');
-
-      return;
-    }
-
-    const savedPreference = localStorage.getItem("theme");
-
-    if (savedPreference === "dark") {
-      document.documentElement.setAttribute('data-theme', 'dark');
-
-      return;
-    } else if (savedPreference === "light") {
-      document.documentElement.setAttribute('data-theme', 'light');
-
-      return;
-    }
-
-    const prefersSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    if (prefersSystemDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  }
-</script>

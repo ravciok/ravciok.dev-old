@@ -1,5 +1,7 @@
 [data-theme="light"] {
-    --font-color: #424242;
+    --theme-color: var(--bs-pink);
+    --title-color: #000;
+    --text-color: #424242;
     --bg-color: #fff;
     --prism-bg: #e3eaf2;
     --prism-bg-selection: #8da1b9;
@@ -13,10 +15,14 @@
     --prism-font-color-7: #7c00aa;
     --prism-font-color-8: #a04900;
     --prism-font-color-9: #c22f2e;
+    color-scheme: light;
 }
 
+
 [data-theme="dark"] {
-    --font-color: #e1e1ff;
+    --theme-color: var(--bs-pink);
+    --title-color: #fff;
+    --text-color: #e1e1ff;
     --bg-color: #161625;
     --prism-bg: #111b27;
     --prism-bg-selection: #3c526d;
@@ -30,15 +36,17 @@
     --prism-font-color-7: #c699e3;
     --prism-font-color-8: #e9ae7e;
     --prism-font-color-9: #cd6660;
+    color-scheme: dark;
 }
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --bs-font-sans-serif: 'Roboto', sans-serif;
+    --bs-font-monospace: 'Roboto Mono', monospace;
 }
 
 body {
     background: var(--bg-color);
-    color: var(--font-color);
+    color: var(--text-color);
     transition: background-color .3s ease-in-out;
 }
 
@@ -60,4 +68,13 @@ body {
 
 .utterances {
     max-width: none;
+}
+
+a, a:hover, code {
+    color: var(--theme-color);
+}
+
+mark {
+    background: var(--theme-color);
+    filter: brightness(1.3);
 }

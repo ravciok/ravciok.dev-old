@@ -1,0 +1,6 @@
+@import url('prism-plugins.css');
+@import url('prism-theme.css');
+
+img {
+    width: 100%;
+}

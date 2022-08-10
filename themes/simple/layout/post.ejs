@@ -1,21 +1,9 @@
-<%- css('css/prism-plugins.css') %>
-<%- css('css/prism-theme.css') %>
-
-<style>
-    img {
-        width: 100%;
-    }
-</style>
-
-
-<div class="row d-flex mb-3" style="position:relative;">
+<div class="row d-flex mb-4">
     <div class="col">
-        <h1 class="m-0"><%- page.title %></h1>
-        <div><%- full_date(page.date, 'LL') %></div>
-        <div><%- symbolsTime(page) %></div>
+        <h2 class="m-0 fw-bold" style="color: var(--title-color)"><%- page.title %></h2>
+        <small><%- full_date(page.date, 'LL') %><span class="mx-2">·</span><%- symbolsTime(page) %></small>
     </div>
 </div>
-
 
 <%- page.content %>
 

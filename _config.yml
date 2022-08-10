@@ -103,4 +103,4 @@ markdown:
     - markdown-it-sup
 
 symbols_count_time:
-  suffix: "min"
+  suffix: "min read"
