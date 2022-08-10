@@ -1,10 +1,7 @@
-:root {
-    --bs-font-sans-serif: 'Roboto', sans-serif;
-    --bs-font-monospace: 'Roboto Mono', monospace;
-}
-
 [data-theme="light"] {
-    --font-color: #424242;
+    --theme-color: var(--bs-pink);
+    --title-color: #000;
+    --text-color: #424242;
     --bg-color: #fff;
     --prism-bg: #e3eaf2;
     --prism-bg-selection: #8da1b9;
@@ -23,7 +20,9 @@
 
 
 [data-theme="dark"] {
-    --font-color: #e1e1ff;
+    --theme-color: var(--bs-pink);
+    --title-color: #fff;
+    --text-color: #e1e1ff;
     --bg-color: #161625;
     --prism-bg: #111b27;
     --prism-bg-selection: #3c526d;
@@ -40,9 +39,14 @@
     color-scheme: dark;
 }
 
+:root {
+    --bs-font-sans-serif: 'Roboto', sans-serif;
+    --bs-font-monospace: 'Roboto Mono', monospace;
+}
+
 body {
     background: var(--bg-color);
-    color: var(--font-color);
+    color: var(--text-color);
     transition: background-color .3s ease-in-out;
 }
 
@@ -64,4 +68,13 @@ body {
 
 .utterances {
     max-width: none;
+}
+
+a, a:hover, code {
+    color: var(--theme-color);
+}
+
+mark {
+    background: var(--theme-color);
+    filter: brightness(1.3);
 }
