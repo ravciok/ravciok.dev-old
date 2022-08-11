@@ -39,21 +39,22 @@
         <%- css('css/post.css') %>
     <% } %>
     <%- js('js/main.js') %>
+</head>
+<body>
+    <div class="container d-flex flex-column" style="max-width: 800px">
+        <%- partial('partial/header') %>
+
+        <div class="row">
+            <div class="col">
+                <%- body %>
+            </div>
+        </div>
+
+        <%- partial('partial/footer') %>
+    </div>
+
     <% if (is_post()) { %>
         <%- js('js/post.js') %>
     <% } %>
-</head>
-<body>
-<div class="container d-flex flex-column" style="max-width: 800px">
-    <%- partial('partial/header') %>
-
-    <div class="row">
-        <div class="col">
-            <%- body %>
-        </div>
-    </div>
-    
-    <%- partial('partial/footer') %>
-</div>
 </body>
 </html>
