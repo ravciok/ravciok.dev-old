@@ -7,20 +7,8 @@
 
 <%- page.content %>
 
-<div class="mt-5 comments-container"></div>
-
-<script>
-    const commentContainer = document.querySelector('.comments-container');
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-
-    const script = document.createElement('script');
-
-    script.setAttribute('src', 'https://utteranc.es/client.js');
-    script.setAttribute('repo', 'ravciok/ravciok.dev-comments');
-    script.setAttribute('issue-term', 'pathname');
-    script.setAttribute('theme', `github-${ currentTheme }`);
-    script.setAttribute('crossorigin', 'anonymous');
-    script.setAttribute('async', 'true');
-
-    commentContainer.appendChild(script);
-</script>
+<div class="mt-5 comments-container d-flex flex-column align-items-center justify-content-center"
+     style="min-height: 269px">
+    <div class="spinner-grow" role="status" style="display: flex; flex-shrink: 1;"></div>
+    <div class="utterances-container hide"></div>
+</div>
