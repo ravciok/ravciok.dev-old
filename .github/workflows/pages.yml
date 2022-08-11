@@ -1,4 +1,4 @@
-name: Pages build and deploy
+name: Build and commit on deploy branch
 on:
   push:
     branches:
@@ -23,7 +23,7 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Deploy
+      - name: Commit
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
