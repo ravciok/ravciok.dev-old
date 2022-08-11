@@ -4,3 +4,18 @@
 img {
     width: 100%;
 }
+
+.utterances {
+    max-width: none;
+    height: 0;
+}
+
+.utterances-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hide {
+    height: 0 !important;
+}
