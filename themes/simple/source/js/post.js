@@ -14,5 +14,5 @@ utterancesContainer.appendChild(script);
 
 setTimeout(() => {
   loadingSpinner.remove();
-  utterancesContainer.classList.toggle('hide');
+  utterancesContainer.classList.toggle('hide-on-loading');
 }, 1000);
